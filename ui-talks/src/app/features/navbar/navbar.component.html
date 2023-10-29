@@ -1,0 +1,21 @@
+<div class="navbar py-2 px-2">
+  <div class="navbar-main">
+    <div class="navbar-section">
+      <div (click)="goToTopics()">Topics</div>
+      <div (click)="goToRecent()">Recent Blogs</div>
+      <div (click)="goToFeatured()">Featured Blogs</div>
+    </div>
+    <div *ngIf="!showLogout" class="navbar-section">
+      <div (click)="subscribeUs()">Subscribe</div>
+      <div (click)="loginToPage()">Login</div>
+    </div>
+    <div *ngIf="showLogout">
+      <button
+        class="bg-red-600 px-6 py-2 text-xl text-white rounded-3xl"
+        (click)="logOut()"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</div>
