@@ -1,3 +1,13 @@
+.site-logo {
+  cursor: pointer;
+  font-style: italic;
+  color: #c3002f;
+  font-weight: bold;
+  span {
+    color: #087ea4;
+  }
+}
+
 .navbar {
   width: 100%;
   position: fixed;
@@ -17,10 +27,34 @@
 }
 
 .navbar-section > div {
-  border-radius: 20px;
-  padding: 10px 20px;
+  border-radius: 10px;
+  padding: 5px 10px;
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(2, 39, 39);
   color: white;
+  font-size: 14px;
   cursor: pointer;
+}
+
+// Responsiveness....
+@media only screen and (max-width: 840px) {
+  .navbar-main {
+    display: none;
+  }
+  .site-logo {
+    margin: 0;
+    padding: 0;
+  }
+  .mobile-nav {
+    position: fixed;
+    right: 0;
+    margin: 10px;
+    button {
+      border-radius: 10px;
+      color: white;
+    }
+    .subscibe {
+      background-color: black;
+    }
+  }
 }
